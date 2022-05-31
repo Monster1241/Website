@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <!-- add icon link -->
+   <link rel="shortcut icon" href="pic\favicon.png">
+   <!-- add navbar -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+  body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#21618C ;
+  color: white;
+}
+</style>
+<style>
+  .h1 {
+  font-family: "Contrast";
+   font-size: 50%;
+   }
+   .header {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 30px;
+}
+.content {padding:20px;}
+</style>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="Blog.html">Blog</a>
+  <a href="CV.html">CV</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="https://www.youtube.com/channel/UCmjmB6EnIw8MhhupQ4gw3yQ">Youtube</a>
+  <a class="active" href="signup.html">Sign Up</a>
+</div>  
+<style>
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 50px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+  button:hover {
+  opacity:1; 
+}
+  .signupb {
+  padding: 14px 20px;
+  background-color: green;
+  float: left;
+  width: 50%;
+  }
+</style>
+<style>
+  .box {
+  background-color: white;
+  width: 400px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 150px;
+  position: absolute;
+  right: 280px;
+  top: 25px;
+}
+</style>
+<script>
+function validateForm() {
+  var fname = document.forms["myForm"]["fname"].value;
+  var lname = document.forms["myForm"]["lname"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var psw = document.forms["myForm"]["psw"].value;
+  if (fname == "" || lname == "" || email == "" || psw == "") {
+    alert(" Empty field found, please fill the form ");
+    return false;
+  }
+}
+</script>
+</head>
+  <body style="background-color: #132639;">
+  <div class="header">
+Sign Up
+  </div>
+  <div class="box">
+  <p> Please fill the form to sign up.</p><hr>
+  <form name="myForm" action="signedup.html" onsubmit="return validateForm()" method="post">
+  <b>First name</b> <br>
+  <input type="text" placeholder="Enter First name" name="fname"><br><br>
+  <b>Last name </b><br>
+  <input type="text" placeholder="Enter Last name" name="lname"><br><br>
+  <b>Email</b> <br>
+  <input type="text" placeholder="Enter Email" name="email"><br><br>
+  <b>Password</b> <br>
+  <input type="text" placeholder="Enter Password" name="psw"><br><br>
+  <p>By signing in you agree to our Terms & Privacy</p>
+  <button class="signupb" onsubmit="document.getElementById('id01').style.display='block'" style="width:auto;" action="signedup.html">Sign Up</button>
+</form>
+</div>
+</body>
+</html>
+
+
